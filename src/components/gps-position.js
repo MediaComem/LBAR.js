@@ -97,8 +97,8 @@ AFRAME.registerSystem('gps-position', {
     this.video.setAttribute('muted', '');
     this.video.setAttribute('playsinline', '');
     this.video.style.height = '100vh';
-    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-      console.error("arError", {error: 'VIDEO_FAIL'});
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {      
+      console.error('getUserMedia fail to get the Video stream ');
     } else {
       navigator.mediaDevices.getUserMedia({audio: false, video: {facingMode: 'environment'}})
         .then(stream => this.video.srcObject = stream);
