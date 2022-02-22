@@ -1,14 +1,10 @@
-
 # LBAR.js
-*«The ship does not actually move itself, but, using the Dark Matter Accelerator, it moves the universe around it as stated by Professor Farnsworth and later realized by Cubert Farnsworth»*
+*“I understand how the engines work now. It came to me in a dream. The engines don't move the ship at all. The ship stays where it is and the engines move the universe around it.”* 
+―Cubert Farnsworth, from Futurama S02E10, A Clone of My Own [^1]
 
-LBAR.js last version is 0.2, and is published under the MIT Licence.
+Based on the location-based marker portion of [AR.js](https://github.com/AR-js-org/AR.js), LBAR.js is a minimalist library for creating WebXR location-based markers 📍 with [A-Frame](https://github.com/aframevr/aframe/) 1.3.0. It targets [WebXR-enabled browsers](https://caniuse.com/webxr) and contains one system (gps-position) and three components (faces-north; gps-position; pitch-roll-look-controls). LBAR.js’s last version is 0.2, and is published under the MIT Licence.
 
-Inspired by the location based marker part of [AR.js](https://github.com/AR-js-org/AR.js), LBAR.js is a minimalist Web XR Location Based Markers for A-Frame 1.3.0.
-
-It is targeting WebXr enabled browser, and offer you 1 system and 3 components.
-
-Made by the [Media Engineering Institute](https://heig-vd.ch/en/research/mei) with <3
+Made with ♡ at the [Media Engineering Institute](https://heig-vd.ch/en/research/mei). 
 
 ## Usage
 
@@ -32,29 +28,32 @@ Made by the [Media Engineering Institute](https://heig-vd.ch/en/research/mei) wi
   </body>
 </html>
 ```
-Will place a red box on the [Palace of Nations](https://en.wikipedia.org/wiki/Palace_of_Nations).
-Demo and source aviable here: https://glitch.com/edit/#!/torch-cyber-conga?path=index.html
-Test it on a WebXr enabled Browser with GPS Activated (on a android smartphone for example).
-In production, switch LBAR.js script url to:
+This will place a red cube on the [Palace of Nations](https://en.wikipedia.org/wiki/Palace_of_Nations). 
+Demo and source are available here: https://glitch.com/edit/#!/torch-cyber-conga?path=index.html
+Test it on a WebXR-enabled browser, with a location-enabled (GPS) device (ie. an Android smartphone). 
+
+In production, switch LBAR.js’s script url to:
 ```html
 <script src="https://rawcdn.githack.com/MediaComem/LBAR.js/5001fa7e4a9f6141d34a83213ce4a6a813673559/dist/lbar-v0.2.min.js"></script>
 ```
 ### gps-position system
-The *gps-position* system can be conf. with three parameters:
+The *gps-position* system can be configured with three parameters:
 ```html
 <a-scene  gps-position="minAccuracy: 100; minDistance: 2; cam3DoF: true">
 ```
-Any gps data above *minAccuracy* will be discarded.
-*minDistance* control how frequently GPS updates are processed. With the defaul value of 2, only a 2[m] GPS  move will trigger a replacement of the markers.
-The camera in the 3DoF mode can be disable by setting *cam3DoF* to false (the default value is true).
-The camera in WebXr AR (6DoF) is enable and handled by the AR mode of A-Frame.
+Any GPS/location data above *minAccuracy* will be discarded. 
+*minDistance* controls how frequently GPS updates are processed. With a defaul value of 2, the markers are repositioned when the user has travelled at least two meters. 
+In 3DoF mode, the camera can be disabled by setting *cam3DoF* to false (default value is true). 
+In WebXR AR (6DoF), the camera is enabled (and handled) by A-Frame’s AR mode. 
 
-### faces-north components
-The *faces-north* component make the entity always faces north (using the device's magnetometer).
-It **must** be a parent of all the location based markers.
+### faces-north component
+An entity with the *faces-north* component will always faces north (based on the device’s magnetometer data). All location-based markers **must** be children of an entity with this component. 
 
-### gps-position components
-Latitude and longitude of the location marker entity **must** be specified. The entity will be placed on the *faces-north* plane  relatively to the GPS position of the device.
+### gps-position component
+Latitude and longitude of the location-based marker/entity **must** be specified. The entity will be placed on the *faces-north* plane, relatively to the device’s location data (GPS). 
 
-### pitch-roll-look-controls
-This components will enable only the pitch and roll controls of the 3DoF camera (and disable yaw movements). As the *faces-north* component rotate his yaw using the device's magnetometer, the camera must not rotate on the yaw axis anymore.  This component will not handle the camera in the WebXr AR (6DoF) mode (it will be handled by the AR mode of A-Frame).
+### pitch-roll-look-controls component
+This component will only enable the pitch and roll controls of the 3DoF camera (thus disabling yaw control). Since the *faces-north* component rotates its yaw (based on the device’s magnetometer), the camera must not rotate on the yaw axis anymore. This component will not handle the camera in the WebXR AR (6DoF) mode, since A-Frame’s AR mode will take over. 
+
+
+[^1]: Verrone, P. M. (Writer), Westbrook, J. (Staff writer), Moore, R. (Director), Haaland, B. (Supervising director). (2000, April 9). A Clone of My Own (Season 2, Episode 10) [TV series episode]. In D. X. Cohen, M. Groening (Executive Producers), Futurama. Twentieth Century Fox Film Productions.
