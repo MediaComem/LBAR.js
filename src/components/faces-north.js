@@ -12,7 +12,7 @@ AFRAME.registerComponent('faces-north', {
     this._onDeviceOrientation = this._onDeviceOrientation.bind(this);
     window.addEventListener('deviceorientationabsolute', this._onDeviceOrientation);
 
-    // Manage the switching betweem the look-controls cam and the AR/VR cam
+    // Manage the switching between the look-controls cam and the AR/VR cam
     this._onEnterVrAr = this._onEnterVrAr.bind(this);
     this._onExitVrAr = this._onExitVrAr.bind(this);
     window.addEventListener('enter-vr', this._onEnterVrAr);
