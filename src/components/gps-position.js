@@ -132,11 +132,10 @@ AFRAME.registerSystem('gps-position', {
   },
 
   _onDeviceGPSError: function (error) {    
-    // todo: show error on app
-    if (err.code === 1) {
+    if (error.code === 1) {
       console.error('Please activate Geolocation and refresh the page. If it is already active, please check permissions for this website.');
     }
-    if (err.code === 3) {
+    if (error.code === 3) {
       console.error('Cannot retrieve GPS position. Signal is absent.');
     }
   },
