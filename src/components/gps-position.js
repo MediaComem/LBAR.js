@@ -131,8 +131,7 @@ AFRAME.registerSystem('gps-position', {
     this.video.play();
   },
 
-  _onDeviceGPSError: function (error) {
-    console.warn(`error ${err.code}: ${err.message}`);
+  _onDeviceGPSError: function (error) {    
     // todo: show error on app
     if (err.code === 1) {
       console.error('Please activate Geolocation and refresh the page. If it is already active, please check permissions for this website.');
