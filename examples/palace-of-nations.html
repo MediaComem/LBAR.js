@@ -1,0 +1,19 @@
+<!DOCTYPE  html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>LBAR.js</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="../src/components/gps-position.js"></script>
+    <script src="../src/components/faces-north.js"></script>
+    <script src="../src/components/pitch-roll-look-controls.js"></script>
+  </head>
+  <body>
+    <a-scene gps-position webxr="referenceSpaceType: unbounded; requiredFeatures: unbounded;">
+      <a-entity faces-north>
+        <a-box gps-position="latitude: 46.2265228; longitude: 6.1413027" color="red"></a-box>
+      </a-entity>
+      <a-entity position="0 0 0" camera  pitch-roll-look-controls></a-entity>
+    </a-scene>
+  </body>
+</html>
