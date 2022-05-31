@@ -97,7 +97,7 @@ AFRAME.registerSystem('gps-position', {
     this.video.setAttribute('muted', '');
     this.video.setAttribute('playsinline', '');
     this.video.style.height = '100vh';
-    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {      
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
       console.error('getUserMedia failed to get the Video stream');
     } else {
       navigator.mediaDevices.getUserMedia({audio: false, video: {facingMode: 'environment'}})
@@ -131,7 +131,7 @@ AFRAME.registerSystem('gps-position', {
     this.video.play();
   },
 
-  _onDeviceGPSError: function (error) {    
+  _onDeviceGPSError: function (error) {
     if (error.code === 1) {
       console.error('Please activate Geolocation and refresh the page. If it is already active, please check permissions for this website.');
     }
@@ -144,6 +144,7 @@ AFRAME.registerSystem('gps-position', {
     const position = {
       latitude: pos.coords.latitude,
       longitude: pos.coords.longitude,
+      altitude: pos.coords.altitude,
       accuracy: pos.coords.accuracy,
     };
 
