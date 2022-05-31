@@ -141,6 +141,7 @@ AFRAME.registerSystem('gps-position', {
   },
 
   _onDeviceGPS: function (pos) {
+
     const position = {
       latitude: pos.coords.latitude,
       longitude: pos.coords.longitude,
