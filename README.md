@@ -2,7 +2,7 @@
 *“I understand how the engines work now. It came to me in a dream. The engines don't move the ship at all. The ship stays where it is and the engines move the universe around it.”*
 ―Cubert Farnsworth, from Futurama S02E10, A Clone of My Own [^1]
 
-Based on the location-based marker portion of [AR.js](https://github.com/AR-js-org/AR.js), LBAR.js is a minimalist library for creating WebXR location-based markers 📍 with [A-Frame](https://github.com/aframevr/aframe/) 1.3.0. It targets [WebXR-enabled browsers](https://caniuse.com/webxr) and contains one system (gps-position) and three components (faces-north; gps-position; pitch-roll-look-controls). LBAR.js’s last version is 0.3, and is published under the MIT Licence.
+Based on the location-based marker portion of [AR.js](https://github.com/AR-js-org/AR.js), LBAR.js is a minimalist library for creating WebXR location-based markers 📍 with [A-Frame](https://github.com/aframevr/aframe/) 1.3.0. It targets [WebXR-enabled browsers](https://caniuse.com/webxr) and contains one system (gps-position) and three components (faces-north; gps-position; pitch-roll-look-controls). LBAR.js’s last version is 0.3.1, and is published under the MIT Licence.
 
 Made with ♡ at the [Media Engineering Institute](https://heig-vd.ch/en/research/mei).
 
@@ -16,7 +16,7 @@ Made with ♡ at the [Media Engineering Institute](https://heig-vd.ch/en/researc
     <meta charset="UTF-8">
     <title>LBAR.js</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/MediaComem/LBAR.js/main/dist/lbar-v0.3.min.js"></script>
+    <script src="https://raw.githack.com/MediaComem/LBAR.js/main/dist/lbar-v0.3.1.min.js"></script>
   </head>
   <body>
     <a-scene gps-position webxr="referenceSpaceType: unbounded; requiredFeatures: unbounded;">

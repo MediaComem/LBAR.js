@@ -80,7 +80,7 @@ AFRAME.registerComponent('faces-north', {
   },
 
   _updateRotation: function () {
-    this.el.object3D.rotation.y = THREE.Math.degToRad(this.heading % 360);
+    this.el.object3D.rotation.y = THREE.MathUtils.degToRad(this.heading % 360);
   },
 
   _computeCompassHeading: function (alpha, beta, gamma) {
