@@ -34,7 +34,7 @@ Test it on a WebXR-enabled browser, with a location-enabled (GPS) device (ie. an
 
 In production, switch LBAR.js’s script url to:
 ```html
-<script src="https://rawcdn.githack.com/MediaComem/LBAR.js/9dbb413dac79430868844e7a06b82e89f112fed3/dist/lbar-v0.3.min.js"></script>
+<script src="https://rawcdn.githack.com/MediaComem/LBAR.js/3491e86ae6cad03af56560d9c539396f15c0a869/dist/lbar-v0.3.1.min.js"></script>
 ```
 ### gps-position system
 The *gps-position* system can be configured with three parameters:
