@@ -42,7 +42,7 @@ The *gps-position* system can be configured with three parameters:
 <a-scene  gps-position="minAccuracy: 100; minDistance: 2; cam3DoF: true">
 ```
 Any GPS/location data above *minAccuracy* will be discarded.
-*minDistance* controls how frequently GPS updates are processed. With a defaul value of 2, the markers are repositioned when the user has travelled at least two meters.
+*minDistance* controls how frequently GPS updates are processed. With a default value of 2, the markers are repositioned when the user has travelled at least two meters.
 In 3DoF mode, the camera can be disabled by setting *cam3DoF* to false (default value is true).
 In WebXR AR (6DoF), the camera is enabled (and handled) by A-Frame’s AR mode.
 
