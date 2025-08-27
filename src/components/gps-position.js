@@ -111,7 +111,6 @@ AFRAME.registerSystem('gps-position', {
     if (!this.video) return;
     this._pauseVideo();
     this.video.remove();
-    this.videoContainer.removeChild(this.video);
     this.video = null;
     document.body.removeChild(this.videoContainer);
     this.videoContainer = null;
