@@ -29,8 +29,6 @@ Made with ♡ at the [Media Engineering Institute](https://heig-vd.ch/en/researc
 </html>
 ```
 This will place a red cube on the [Palace of Nations](https://en.wikipedia.org/wiki/Palace_of_Nations).
-Demo and source are available here: https://glitch.com/edit/#!/torch-cyber-conga?path=index.html
-Test it on a WebXR-enabled browser, with a location-enabled (GPS) device (ie. an Android smartphone).
 
 In production, switch LBAR.js’s script url to:
 ```html
